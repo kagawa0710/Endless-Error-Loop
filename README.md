@@ -27,4 +27,23 @@ graph TD
 ```
 
 ---
+```
+if status == "解決しない":
+  print("発狂しちゃう")
+elif status == "別のエラーが出る":
+  print("3日間は寝込んじゃう")
+elif status == "解決方法見つける":
+  print("英語は全く読めない")
+```
 
+```mermaid
+graph TD
+  ST(Start)             --> Check1{"status == #quot;解決しない#quot;"}
+  Check1    -- True     --> Output1["print(#quot;発狂しちゃう#quot;)"]
+  Check1    -- False    --> Check2{"status == #quot;別のエラーが出る#quot;"}
+  Check2    -- True     --> Output2["print(#quot;3日間は寝込んじゃう#quot;)"]
+  Check2    -- False    --> Check3{"status == #quot;解決方法見つける#quot;"}
+  Check3    -- True     --> Output3["print(#quot;英語は全く読めない#quot;)"]
+  
+```
+---
